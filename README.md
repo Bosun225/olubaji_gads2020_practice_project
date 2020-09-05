@@ -1,1 +1,2 @@
-# olubaji_gads2020_practice_project
+# Olubaji Abdulqudus - My Practice Project for GADS 2020 ASSOCIATE CLOUD ENGINEER TRACK
+
