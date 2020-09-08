@@ -1,10 +1,10 @@
 # Google Africa Developer Scholarship (GADS2020) 
 ## Google Cloud Practice Project:
-## TRACK: ASSOCIATE CLOUD ENGINEER TRACK
+## TRACK: Associate Cloud Engineer
 ## PHASE II
 ## NAME: Olubaji Abdulqudus 
 
-# >>>>> DESCRIPTION:
+# DESCRIPTION:
 GADS 2020 phase II practice project tasks involves showing competency in using gcloud command line
 and also providing proof of completed labs. To verify participant's proficient use of google cloud shell,
 participants were asked to perfrom the below listed tasks.
