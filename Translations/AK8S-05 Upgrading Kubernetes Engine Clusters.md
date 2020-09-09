@@ -1,6 +1,6 @@
-#LAB TITLE: AK8S-05 Upgrading Kubernetes Engine Clusters
+# LAB TITLE: AK8S-05 Upgrading Kubernetes Engine Clusters
 
-##OBJECTIVES: 
+## OBJECTIVES: 
 	-Use the GCP Console to upgrade your GKE cluster.
 
 

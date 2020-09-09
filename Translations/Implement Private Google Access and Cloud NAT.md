@@ -1,6 +1,6 @@
-#Lab Title: Implement Private Google Access and Cloud NAT
+# Lab Title: Implement Private Google Access and Cloud NAT
 
-##OBJECTIVE:
+## OBJECTIVE:
 - Configure a VM instance that doesn't have an external IP address
 - Connect to a VM instance using an Identity-Aware Proxy (IAP) tunnel
 - Enable Private Google Access on a subnet
@@ -8,8 +8,8 @@
 - Verify access to public IP addresses of Google APIs and services and other connections to the internet
 
 
-#Task 1. Create the VM instance 
-To achieve the above task we are required to:
+# Task 1. Create the VM instance 
+To achieve the above task I will:
   (1) Create a VPC network, subnet and firewall rules
   (2) Create a VM instance with no external IP address
   (3) Connect to the instance using an IAP tunnel.
@@ -20,15 +20,15 @@ To create a subnet in the privatenet network run the cmd- gcloud compute network
 
 To create firewall rules for this network run the cmd- gcloud compute firewall-rules create privatenet-allow-ssh --action=ALLOW --direction=INGRESS --network=privatenet --rules=tcp:22 --source-ranges=35.235.240.0/20
 
-To create a VM instance with no external IP address run the cmd- gcloud compute instances create vm-internal --machine-type=n1-standared-1 --zone-us-central-c --subnet=privatenet-us --no-address
+To create a VM instance with no external IP address run the cmd- gcloud compute instances create vm-internal --machine-type=n1-standard-1 --zone=us-central-c --subnet=privatenet-us --no-address
 
 To connect the isntance using IAP tunnel run the cmd- gcloud compute ssh vm-internal --zone us-central1-c --tunnel-through-iap ----- (N.B: If prompted about continuing, type Y. When prompted for a passphrase, press ENTER. When prompted for the same passphrase, press ENTER)
 
 To test the external connectivity of vm-internal run the cmd- ping -c 2 www.google.com
 
 
-#Task 2. Enable Private Google Access
-To achieve the above task I will:
+# Task 2. Enable Private Google Access
+To achieve the above task and test it I will:
  (1) Create a storage bucket with location set to multi-region
  (2) Copy an image file to my bucket. 
  (3) Access the image from the VM created earlier (vm-internal)
@@ -58,7 +58,7 @@ Now I will enable private google access:
 
 		Now I will configure cloudNAT gateway
 
-#Task 3. Configure a Cloud NAT gateway
+# Task 3. Configure a Cloud NAT gateway:
 First, you will confirm if the vm instances have access to the internet for updates and patches.
 	From the cloud shell i'll run the cmd- sudo apt-get update   (This will work because cloud shell has an external IP address)
 
@@ -68,10 +68,10 @@ First, you will confirm if the vm instances have access to the internet for upda
 
 Now lets configure a Cloud NAT gateway: 
 
-First create a router for your cloudNAT
-To create a router run the cmd- gcloud compute routers create nat-router --network=privatenet --region=us-central1
+	First create a router for your cloudNAT
+	To create a router run the cmd- gcloud compute routers create nat-router --network=privatenet --region=us-central1
 
-To configure and cloudNAT gateway run the cmd- gcloud compute routers nats create nat-config --router=nat-router --auto-allocate-nat-external-ips --nat-all-subnet-ip-ranges --region=us-central1
+	To configure and cloudNAT gateway run the cmd- gcloud compute routers nats create nat-config --router=nat-router --auto-allocate-nat-external-ips --nat-all-subnet-ip-ranges --region=us-central1
 
 Verify that the cloudNAT gateway is functional-
 	From cloud shell ssh into vm-internal using the cmd- gcloud compute ssh vm-internal --zone us-central1-c --tunnel-through-iap (so that you are running your cmds from the vm instance)
