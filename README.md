@@ -1,4 +1,4 @@
-# Google Africa Developer Scholarship (GADS2020) 
+# Google Africa Developer Scholarship (GADS2020) (Sponsors: Google, Andela & Pluralsight )
 ## Google Cloud Practice Project:
 ## TRACK: Associate Cloud Engineer
 ## PHASE II
@@ -63,5 +63,18 @@ with markdown files available in the folder "Translations":
 ### >>>Implementing_private_Google_Access_and_Cloudnat
 ### >>>VPC Networking
 ### >>>AK8S-05_Upgrading_Kubernetes_Engine_Clusters
+
+
+
+## SUCCESS ACHIEVED
+![Certificate - Google Certified Associate Cloud Engineer](https://user-images.githubusercontent.com/45357287/110754707-63e2db80-8248-11eb-880d-426a5fd2ccd9.png)
+
+### Cloud Enthusiast on a journey of switching my career to the I.T. Industry. A participant of Google Africa Developer Scholarship 2020. Where over 30,000 participants from different countries in Africa took part in the 2020 GADS program, having passed through all the qualification phases successfully. 
+### As one of the top 1000 participants who got to the final stage, I received a free voucher from google to write the Google Certified - Associate Cloud Engineer Certification Exam.
+
+### Currently in search for unpaid work (Internship) to improve my cloud skills with the end goal of becoming a Google Certified Professional Cloud DevOps Engineer.
+
+
+
 
 
