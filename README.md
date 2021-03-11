@@ -2,7 +2,7 @@
 ## Google Cloud Practice Project:
 ## TRACK: Associate Cloud Engineer
 ## PHASE II
-## NAME: Olubaji Abdulqudus 
+## NAME: Abdulqudus Olubaji
 
 # DESCRIPTION:
 GADS 2020 phase II practice project tasks involves showing competency in using gcloud command line
